@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Hi, I'm Jeremy. A lifelong computer enthusiast and professional software developer with 15+ years of experience at different sized companies. All opinions are my own, and not that of any employer past or present.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jeremylaw.ca" # the base hostname & protocol for your site, e.g. http://example.com
-
+permalink: /:year/:month/:day/:title/
 # Build settings
 theme: minima
 plugins:

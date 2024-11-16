@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: tech
+#categories: tech
 date: "2016-04-23T17:12:33.962Z"
 title: "Testing the Google Vision API"
 description: "A quick tutorial on how to use the Google Vision API to analyze images."
