@@ -5,5 +5,6 @@ title: "Tools to make Kubernetes easier to work with"
 description: "A list of tools that make working with Kubernetes easier"
 ---
 
+<img src="/assets/bailey-alexander-8zhoteMsiHc-unsplash.jpg" />
 
 After working with Kubernetes for about a year, I have found several tools that make working with your environments easier

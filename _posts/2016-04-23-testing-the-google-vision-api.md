@@ -1,6 +1,5 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
 categories: tech
 date: "2016-04-23T17:12:33.962Z"
 title: "Testing the Google Vision API"
@@ -13,7 +12,7 @@ Last month I found an interesting Google Cloud Platform [blog post](https://clou
 
 From the post:
 
->Now anyone can submit their images to the Cloud Vision API to understand the contents of those images from detecting everyday objects (for example, "sports car", "sushi", or "eagle") to reading text within the image or identifying product logos.
+> Now anyone can submit their images to the Cloud Vision API to understand the contents of those images from detecting everyday objects (for example, "sports car", "sushi", or "eagle") to reading text within the image or identifying product logos.
 
 Having experimented with OCR using libraries like [Tesseract](https://github.com/tesseract-ocr/tesseract "Tesseract Git Repository") (with varying degrees of success) I was eager to try out this new tool, and I set out to build an app to test it's usability and accuracy.
 
@@ -39,8 +38,6 @@ In the view I create a simple interface for the app. A button to open the photo 
 
 The controller will contain event handlers for out interface, and the app logic required to make the actual request to the Vision API.
 
-
-
 ```xml
 #views/index.xml
 
@@ -51,6 +48,7 @@ The controller will contain event handlers for out interface, and the app logic 
 <Label id="lbl_labelsText"></Label>
 
 ```
+
 ```javascript
 #controllers/index.js
 
@@ -116,19 +114,19 @@ In this example I have requested LABEL_DETECTION on the image. It is possible to
 
 The available detection types are:
 
-FACE\_DETECTION
+FACE_DETECTION
 
-TEXT\_DETECTION
+TEXT_DETECTION
 
-LANDMARK\_DETECTION
+LANDMARK_DETECTION
 
-LABEL\_DETECTION
+LABEL_DETECTION
 
-LOGO\_DETECTION
+LOGO_DETECTION
 
-SAFE\_SEARCH\_DETECTION
+SAFE_SEARCH_DETECTION
 
-IMAGE\_PROPERTIES
+IMAGE_PROPERTIES
 
 Next, I go ahead and make the request
 
@@ -174,7 +172,7 @@ xhr.send(JSON.stringify(request));
 
 The onload handler takes the return data and checks to see if there are any "labelAnnotations" in it. If there are, it will concatenate them and display them on the screen.
 
-If I add any other types of detection, the results will be in different "typeAnnotations" objects.  Eg. "textAnnotations" for TEXT\_DETECTION, "faceAnnotations" for FACE\_DETECTION, and so on...
+If I add any other types of detection, the results will be in different "typeAnnotations" objects. Eg. "textAnnotations" for TEXT_DETECTION, "faceAnnotations" for FACE_DETECTION, and so on...
 
 ## Results
 
